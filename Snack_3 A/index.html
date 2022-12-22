@@ -15,8 +15,10 @@
          <div class="container">
             <div class="row">
                <div class="col-12">
-                  <input type="text" name="userSendMessage" placeholder="Prova a mandare un messaggio e premi invio!" v-model.trim="userSendMessage"  @keyup.enter="sendMessage()">
-                  <div class="messages" v-for="message in messages"></div>
+                  <input type="text" name="userSendMessage" placeholder="Prova a mandare un messaggio e premi invio!" v-model.trim="userSendMessage"  @keyup.enter="sendNewMessage()">
+                  <div class="messages" v-for="message in messages" :class="(message.status === 'sent') ? 'sent' : 'received'">
+                     {{message.message}}
+                  </div>
                </div>
             </div>
          </div>
