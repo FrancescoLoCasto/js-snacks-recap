@@ -34,11 +34,11 @@ const { createApp } = Vue
     },
 
 
-  created(){
-    while(this.i <= 10){
-      this.getNameGuest()
+    created(){
+      while(this.i <= 10){
+        this.getNameGuest()
+      }
     }
-  }
 
 
     

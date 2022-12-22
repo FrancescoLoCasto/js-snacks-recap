@@ -12,13 +12,20 @@
 
       <div id="app">
 
+         <div class="main-list text-center" v-if="guestList.length == 10" >
 
+            <label for="Name">Inserisci il tuo nome per verificare:</label>
+            <input  type="text" name="Name" v-model="userInputGuest">
+            <p v-if="userInputGuest != `` ">{{check() == true ? "Sei stato invitato" : "Non sei stato invitato"}}</p>
+
+         </div>
       </div>
       
 
 
 
       <!-- Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
       <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
       <script src="./js/script.js"></script>
    </body>
