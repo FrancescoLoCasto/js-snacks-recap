@@ -7,10 +7,16 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-
+        userArrNumber: 0,
+        numbers: [],
+        tot : 0
       }
 
     },
+
+    methods: {
+      
+    }
 
 
     
