@@ -16,7 +16,14 @@ const { createApp } = Vue
 
     methods: {
       getNewMessage() {
-        
+        axios.get("https://flynn.boolean.careers/exercises/api/random/sentence")
+        .then((response) => {
+          let newCreationMess = {
+            message: response.data.response,
+            status: "received"
+          }
+          this.messages.push(newCreationMess)
+        })
       }
     }
 
