@@ -14,14 +14,20 @@
 
          <a href="#" class="btn btn-danger" @click="randomNumbers()">Genera il tuo numero</a>
          
-         <div class="odd">
-
+         <div class="even">
+            <ul>
+               <li v-for="numberPari in evenNumbers">
+                  {{evenNumbers}}
+               </li>
+            </ul>
          </div>
    
-         <div class="even">
-
-
-   
+         <div class="odd">
+            <ul>
+               <li v-for="numberDispari in oddNumbers">
+                  {{oddNumbers}}
+               </li>
+            </ul>
          </div>
       </div>
       
@@ -29,6 +35,7 @@
 
 
       <!-- Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
       <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
       <script src="./js/script.js"></script>
    </body>
