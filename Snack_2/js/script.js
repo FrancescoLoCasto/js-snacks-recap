@@ -9,10 +9,37 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-
+        guestList: [],
+        i: 1,
+        userInputGuest: "",
       }
 
     },
+
+    methods: {
+      getNameGuest(){
+        axios.get("https://flynn.boolean.careers/exercises/api/random/name")
+        .then((response) => {
+          this.guestList.push(response.data.response)
+        })
+      },
+
+      check(){
+        if (this.guestList.includes(this.userInputGuest)){
+          return true
+        } else {
+          return false
+        }
+      }
+    },
+
+
+  created(){
+    while(this.i <= 10){
+      this.getNameGuest()
+    }
+  }
+
 
     
   }).mount('#app')
