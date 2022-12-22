@@ -24,6 +24,17 @@ const { createApp } = Vue
           }
           this.messages.push(newCreationMess)
         })
+      },
+
+      sendNewMessage() {
+        if (this.userSendMessage != '') {
+          let newCreationMess = {
+            message: this.userSendMessage,
+            status: 'sent'
+          }
+          this.messages.push(newCreationMess)
+          this.userSendMessage = ''
+        }
       }
     }
 
