@@ -15,7 +15,18 @@ const { createApp } = Vue
     },
 
     methods: {
-      
+      getNewNumers(){
+        axios.get(`https://flynn.boolean.careers/exercises/api/array/integers?min=1&max=100&items=${this.userNumber}`)
+        .then((response) => {
+          this.tot = 0
+          this.numbers = response.data.response
+          if (this.numbers.length == this.userArrNumber){
+            for (let i = 0; i < this.numbers.length; i++){
+              this.tot += parseInt((this.numbers[i]), 10);
+            }
+          }
+        })
+      }
     }
 
 
