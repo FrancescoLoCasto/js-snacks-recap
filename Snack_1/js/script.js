@@ -16,7 +16,15 @@ const { createApp } = Vue
 
     methods: {
       randomNumbers(){
-         
+         axios.get("https://flynn.boolean.careers/exercises/api/random/int")
+
+         .then((response) => {
+            if (response.data.response % 2 == 0){
+               this.evenNumbers.push(response.data.response)
+            } else {
+               this.oddNumbers.push(response.data.response)
+            }
+         })
       }
     }
   }).mount('#app')
