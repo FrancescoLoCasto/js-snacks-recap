@@ -36,7 +36,7 @@ const { createApp } = Vue
           this.userSendMessage = ''
         }
         setTimeout(() => {
-          
+          this.getNewMessage()
         },1000)
       }
     }
