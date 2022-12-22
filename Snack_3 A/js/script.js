@@ -7,10 +7,18 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-
+        messages: [],
+        userSendMessage: '',
+        activeIndex: 0,
       }
 
     },
+
+    methods: {
+      getNewMessage() {
+        
+      }
+    }
 
     
   }).mount('#app')
