@@ -11,7 +11,19 @@
    <body>
 
       <div id="app">
-         
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <label for="userArrNumber">Scegli un numero e poi premi invio!</label>
+                  <input type="number" name="userArrNumber" v-model="userArrNumber" @keyup.enter="getNewNumers()">
+               </div>
+               <div class="col-12">
+                  <p>
+                     Totale dei numeri : {{ tot }}
+                  </p>
+               </div>
+            </div>
+         </div>
       </div>
       
 
