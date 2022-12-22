@@ -15,7 +15,8 @@
          <div class="container">
             <div class="row">
                <div class="col-12">
-                  <input type="text" name="userSendMessage" id="">
+                  <input type="text" name="userSendMessage" placeholder="Prova a mandare un messaggio e premi invio!" v-model.trim="userSendMessage"  @keyup.enter="sendMessage()">
+                  <div class="messages" v-for="message in messages"></div>
                </div>
             </div>
          </div>

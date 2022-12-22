@@ -1,7 +1,20 @@
-.odd{
-   color: red;
+.sent {
+   width: 30%;
+   height: 20%;
+   padding: 1rem;
+   border-radius: 6px;
+   margin-left: 67%;
+   margin-bottom: 0.2rem;
+   background-color: #d5f9ba;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.even{
-   color: green;
+.received {
+   width: 30%;
+   height: 20%;
+   margin-left: 3%;  
+   padding: 1rem;
+   border-radius: 6px;
+   background-color: white;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
